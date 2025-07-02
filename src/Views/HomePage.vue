@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col md:flex-row items-center max-w-5xl w-full gap-10 justify-around mx-auto px-4 py-8">
+  <div class="flex flex-col md:flex-row items-center max-w-5xl w-full gap-50 justify-around mx-auto px-6 py-10">
     <!-- Left Section -->
     <div class="text-center md:text-left max-w-xl">
       <h1 class="text-3xl sm:text-4xl font-bold text-black">
@@ -27,9 +27,14 @@
     </div>
 
     <!-- Profile Image -->
-    <div>
-      <img src="../assets/image/image copy.png" alt="Pany Mon" class="w-72 h-72 rounded-full object-cover shadow-lg" />
-    </div>
+   <div class="flex justify-center md:justify-start">
+  <img 
+    src="../assets/image/image copy.png" 
+    alt="Pany Mon" 
+    class="w-40 h-40 sm:w-52 sm:h-52 md:w-72 md:h-72 rounded-full object-cover shadow-lg transition-all duration-300"
+  />
+</div>
+
   </div>
 </template>
 

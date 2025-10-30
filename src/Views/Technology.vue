@@ -1,5 +1,5 @@
 <template>
-  <div class="w-90 max-w-sm sm:max-w-md mx-auto mt-6 px-4 md:w-96 sm:w-94">
+  <div class="w-80 max-w-sm sm:max-w-md mx-auto mt-6 md:w-96 sm:w-94">
     <div
       ref="cardRef"
       class="bg-black rounded-xl p-4 sm:p-6 border border-gray-500 opacity-0 translate-y-6 transition-all duration-300 cursor-pointer hover:shadow-[0_0_20px_rgb(0,230,230)] hover:border-[rgb(0,230,230)]"

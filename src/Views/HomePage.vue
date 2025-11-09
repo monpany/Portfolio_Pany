@@ -49,7 +49,7 @@
         class="rounded-full border-4 lime-glow p-1 shadow-lg bg-white flex items-center justify-center w-34 h-34 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-80 lg:h-80"
       >
         <img
-          src="../assets/image/image.png"
+          src="../assets/image/profile.png"
           alt="Pany Mon"
           class="rounded-full object-cover w-full h-full"
         />

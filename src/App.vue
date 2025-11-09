@@ -1,29 +1,33 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue';
-import { gsap } from 'gsap';
-import AboutPage from './Views/AboutPage.vue';
-import Technology from './Views/Technology.vue';
-import LanguageSkills from './Views/LanguageSkills.vue';
-import HomePage from './Views/HomePage.vue';
-import ContactPage from './Views/ContactPage.vue';
-import PortfolioProjects from './Views/ProjectPage.vue';
-import ProjectPage from './Views/ProjectPage.vue';
-import Footer from './Views/footer.vue';
+import { onMounted, onUnmounted } from 'vue'
+import { gsap } from 'gsap'
+import AboutPage from './Views/AboutPage.vue'
+import Technology from './Views/event.vue'
+import LanguageSkills from './Views/LanguageSkills.vue'
+import HomePage from './Views/HomePage.vue'
+import ContactPage from './Views/ContactPage.vue'
+import PortfolioProjects from './Views/ProjectPage.vue'
+import ProjectPage from './Views/ProjectPage.vue'
+import event from './Views/event.vue'
+import WebDevPortfolio from './Views/WebDevPortfolio.vue'
+import Footer from './Views/footer.vue'
+
+
 // GSAP hover underline animations
 const handleMouseEnter = (event) => {
-  const underline = event.target.nextElementSibling;
-  gsap.to(underline, { scaleX: 1, duration: 0.3, ease: 'power2.out' });
-};
+  const underline = event.target.nextElementSibling
+  gsap.to(underline, { scaleX: 1, duration: 0.3, ease: 'power2.out' })
+}
 
 const handleMouseLeave = (event) => {
-  const underline = event.target.nextElementSibling;
-  gsap.to(underline, { scaleX: 0, duration: 0.3, ease: 'power2.in' });
-};
+  const underline = event.target.nextElementSibling
+  gsap.to(underline, { scaleX: 0, duration: 0.3, ease: 'power2.in' })
+}
 
-onMounted(() => {});
+onMounted(() => {})
 onUnmounted(() => {
-  gsap.killTweensOf('.underline');
-});
+  gsap.killTweensOf('.underline')
+})
 </script>
 
 <template>
@@ -38,7 +42,7 @@ onUnmounted(() => {
         <span class="underline absolute bottom-0 left-0 h-[3px] custom-lime w-full scale-x-0 origin-left"></span>
       </li>
       <li class="relative">
-        <a href="#about" class="text-xs sm:text-base" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">About</a>
+        <a href="#webdevportfolio" class="text-xs sm:text-base" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">About</a>
         <span class="underline absolute bottom-0 left-0 h-[3px] custom-lime w-full scale-x-0 origin-left"></span>
       </li>
       <li class="relative">
@@ -54,38 +58,36 @@ onUnmounted(() => {
 
   <!-- Sections -->
   <section id="home" class="flex items-center justify-center bg-gray-200 -mt-30 sm:-mt-30 md:-mt-20 lg:-mt-20 xl:-mt-20 2xl:mt-0">
-    <h1 class="text-4xl font-bold mt-40 "> <HomePage /></h1>
+    <h1 class="text-4xl font-bold mt-40">
+      <HomePage />
+    </h1>
   </section>
 
+  <section id = "webdevportfolio">
+    <WebDevPortfolio />
+  </section>
 
   <section id="about" class="flex items-center justify-center bg-gray-300">
     <AboutPage />
     
   </section>
-  <section  class="flex flex-col md:flex-row items-start justify-center bg-gray-300 p-4">
-    <div class="flex-1 p-4">
-      <Technology />
-    </div>
-    <div>
-      <LanguageSkills />
-    </div>
+  <section>
+    <event />
   </section>
 
-  
   <section id="projects" class="flex flex-col md:flex-row items-start justify-center bg-gray-300 p-4">
     <div class="flex-1 p-4">
       <ProjectPage />
     </div>
-    
-  
   </section>
-  <section id="contact" class="flex items-center justify-center bg-gray-300">
-    <ContactPage /> 
-  </section>
-  <Footer />
 
-  
+  <section id="contact" class="flex items-center justify-center bg-gray-300">
+    <!-- <ContactPage /> -->
+  </section>
+   
+  <Footer />
 </template>
+
 
 <style scoped>
 .portfolio-title {
@@ -101,6 +103,6 @@ onUnmounted(() => {
 }
 
 html {
-  scroll-behavior: smooth; /* Smooth scroll when clicking navbar */
+  scroll-behavior: smooth;
 }
 </style>
